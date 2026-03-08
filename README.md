@@ -1,5 +1,6 @@
 # COMP2090 course project（GRP_23）
 Task1: Board Inventory and Order Management System
+GUI.py+material_lib.py+order.py
 1.Overview:
     Task 1 is a desktop application developed in Python using Object‑Oriented Programming. It helps a board trading company manage its board inventory and customer orders. Users can add different types of boards (brand, colour, factory) to the library, create orders, add boards to orders (with quantity), delete boards from orders, and change order status. All data is saved persistently in JSON files.
   
@@ -16,6 +17,7 @@ The graphical interface is built with Python’s tkinter. It features a scrollab
 
 ==========================================================================
 Task2: Procurement Summarisation(Union-Find)
+task2.html
 1.Overview
 To demonstrate its practical use, we applied it to group board items exported from Task 1 by brand and colour. The result is a standalone HTML page that visualises the grouping and shows a procurement summary – i.e., for each brand+colour, the total quantity needed and which orders require it.
 
