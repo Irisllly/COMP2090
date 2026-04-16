@@ -33,9 +33,12 @@ Enter:
 * Community (or project name)
 * Roomnumber (or unit number)
 Click Creating to create an order (default status is pending).
-#### 2) Delete an order: Select the order in the order list and click Delete.
-#### 3) Switch order status: Select the order and click Changing Status to switch between pending and completed.
-#### 4) View board materials in an order: Select the order and click Show Board. The "Board in This Order" section below will display the board material details (Brand/Color/Factory/Quantity) included in the order.
+#### 2) Delete an order: 
+Select the order in the order list and click Delete.
+#### 3) Switch order status: 
+Select the order and click Changing Status to switch between pending and completed.
+#### 4) View board materials in an order: 
+Select the order and click Show Board. The "Board in This Order" section below will display the board material details (Brand/Color/Factory/Quantity) included in the order.
 
 ### Add Board to Order
 #### 1) Select an order in the order list; select a board in the board list.
