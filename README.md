@@ -1,6 +1,11 @@
 # COMP2090 course project（GRP_23）
 ## project Overview
-This is a Python-based desktop application for managing board orders across different communities and rooms. It provides a graphical interface for maintaining a board library, creating orders, associating boards with quantities, and exporting structured data for further analysis in Task 2.
+### This project consists of two integrated tasks that form a complete data processing pipeline:
+
+*   **Task 1 - Order Management System**: A Python-based desktop application for creating and managing board orders. It provides a graphical interface to maintain a board library, create orders for different communities/rooms, assign board quantities, and **export clean, structured data**.
+*   **Task 2 - Data Analysis System**: A web-based analysis tool that loads the exported data from Task 1. It applies an efficient **Union-Find (Disjoint-Set Union) algorithm** to group identical boards across all orders, providing an instant procurement summary and visualization.
+
+**Core Workflow**: Task 1 handles **data entry and generation**, while Task 2 performs **intelligent aggregation and analysis**. The link between them is a standardized JSON export file.
 ## Demonstration
 [Task1](https://youtu.be/RAFmSs5guhA?si=ZhdDAGnCdyyCo-lg)
 [Task2](https://youtu.be/uAZMfByUcjQ?si=HhsLqFDOxm-hQMPo)
