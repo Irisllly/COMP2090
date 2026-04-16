@@ -12,9 +12,9 @@ This project is a Python desktop application. The GUI is based on tkinter (Pytho
 • Place GUI.py, material_lib.py, and order.py in the same directory 
 
 ## Startup method：
-In the directory containing the aforementioned .py files, execute GUI.pyAfter startup, it will automatically load：
-board.json →which is the Board Library data file, read and written by material_lib.py and：
-orders.json →the order data file, read and written by order.py. It contains basic order information, status, creation time, and a list of boards in the order.
+### In the directory containing the aforementioned .py files, execute GUI.pyAfter startup, it will automatically load：
+* board.json →which is the Board Library data file, read and written by material_lib.py and：
+* orders.json →the order data file, read and written by order.py. It contains basic order information, status, creation time, and a list of boards in the order.
 
 ## Function Operation Instructions:
 ### Board Library Management:
