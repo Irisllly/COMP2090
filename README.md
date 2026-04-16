@@ -1,38 +1,46 @@
 # COMP2090 course project（GRP_23）
-Task1=GUI.py+material_lib.py+order.py
-Task2=task2.html
-Task1: Board Inventory and Order Management System
-1.Overview:
-    Task 1 is a desktop application developed in Python using Object‑Oriented Programming. It helps a board trading company manage its board inventory and customer orders. Users can add different types of boards (brand, colour, factory) to the library, create orders, add boards to orders (with quantity), delete boards from orders, and change order status. All data is saved persistently in JSON files.
-  
-2.Core function:
-2.1: Board Library Management: Add a new board (brand, colour, factory) – duplicate check prevents same brand+colour. Delete a selected board from the library. View all boards in a list.
-2.2: Order Management: Create a new order by entering community and room number. Delete an existing order. Change order status between “pending” and “completed”. View all orders with a summary of how many boards each contains.
-2.3: Board‑Order Association: Select an order and a board, then add the board to the order with a specified quantity. Remove a board from an order. When viewing an order, all its boards (with brand, colour, quantity) are displayed.
-2.4: Data Persistence: Automatically load data from board.json and orders.json on startup; automatically save after any modification.
-  
-3.GUI
-The graphical interface is built with Python’s tkinter. It features a scrollable main canvas containing input fields, buttons, and listboxes. Data is stored in two JSON files: board.json holds the global board library, and orders.json holds all orders. Each order’s board list is stored as an array of dictionaries with brand, colour, and quantity. The program reads these files at startup and writes to them after every change, ensuring data consistency across sessions.
+Operating environment requirements：
+This project is a Python desktop application. The GUI is based on tkinter (Python's standard GUI interface) and can run without any additional third-party libraries. It comes pre-installed on most Windows/macOS systems or with Python; some Linux distributions may require separate installation. Data storage uses JSON files, and reading and writing depend on the Python standard library json.
 
+Recommended environment:
+• Python 3.9
+• Place GUI.py, material_lib.py, and order.py in the same directory 
 
+Startup method：
+In the directory containing the aforementioned .py files, execute GUI.pyAfter startup, it will automatically load：
+board.json →which is the Board Library data file, read and written by material_lib.py and：
+orders.json →the order data file, read and written by order.py. It contains basic order information, status, creation time, and a list of boards in the order.
 
-==========================================================================
-Task2: Procurement Summarisation(Union-Find)
-1.Overview
-To demonstrate its practical use, we applied it to group board items exported from Task 1 by brand and colour. The result is a standalone HTML page that visualises the grouping and shows a procurement summary – i.e., for each brand+colour, the total quantity needed and which orders require it.
+Function Operation Instructions:
+Board Library Management:
+1) Enter the following in the input boxes:
+   • Brand
+   • Board color
+   • Board factory
+2) Click Add:
+   Add the board to the library; the system will check if Brand + Color is duplicated (if duplicated, a Warning will be displayed, and duplicate insertion will not be allowed).
+3) Delete:
+   Select the item in “Board List” and click Delete to delete the board record.
 
-2.Union-Find Data Structure
-Union‑Find maintains a collection of disjoint sets. It supports two main operations:
-2.1: find(x): returns the representative (root) of the set containing x. Application path compression, speeding up future queries.
-2.2: union(x, y): merges the two sets that contain x and y. In this implementation, we use a simple union for clarity.
+Order Management (Corresponding interface: "Order Management")
+1)Create an order: 
+Enter:
+• Community (or project name)
+• Roomnumber (or unit number)
+Click Creating to create an order (default status is pending).
+2) Delete an order: Select the order in the order list and click Delete.
+3) Switch order status: Select the order and click Changing Status to switch between pending and completed.
+4) View board materials in an order: Select the order and click Show Board. The "Board in This Order" section below will display the board material details (Brand/Color/Factory/Quantity) included in the order.
 
-3.Data Linkage with Task1
-The tow tasks are linked through a JSON data file exported from Task1 and loaded into a standalone HTML page for Task2. We added an "Export" button that generates a file of all board items in the required format. This file is then loaded into the Task 2 HTML page. 
+Add Board to Order
+1) Select an order in the order list; select a board in the board list.
+2) Click Add, a quantity input box will pop up, enter Quantity (range limited to 1-1000).
+3) Deleting Board from an Order:
+   • Select the order → Click Show Board to display the board in the order;
+   • Select the board entry to be removed in “Board in This Order”;
+   • Click Delete in the “Add Board to Order” area (delete the order detail row).
 
-
-
-
-
-
-
-
+Export
+In the “Order Management” area, click Export:
+• The system will write the board details from all orders into task1_orders.json; each record contains the fields community, room, brand, color, and quantity, which task 2.html will read and perform Brand+Color 
+aggregation.
