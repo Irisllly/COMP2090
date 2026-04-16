@@ -1,4 +1,7 @@
 # COMP2090 course project（GRP_23）
+Demonstration：
+Task1-https://youtu.be/RAFmSs5guhA?si=ZhdDAGnCdyyCo-lg
+Task2-https://youtu.be/uAZMfByUcjQ?si=HhsLqFDOxm-hQMPo
 Operating environment requirements：
 This project is a Python desktop application. The GUI is based on tkinter (Python's standard GUI interface) and can run without any additional third-party libraries. It comes pre-installed on most Windows/macOS systems or with Python; some Linux distributions may require separate installation. Data storage uses JSON files, and reading and writing depend on the Python standard library json.
 
@@ -40,7 +43,7 @@ Add Board to Order
    • Select the board entry to be removed in “Board in This Order”;
    • Click Delete in the “Add Board to Order” area (delete the order detail row).
 
-Export
+Export                 
 In the “Order Management” area, click Export:
 • The system will write the board details from all orders into task1_orders.json; each record contains the fields community, room, brand, color, and quantity, which task 2.html will read and perform Brand+Color 
 aggregation.
